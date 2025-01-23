@@ -7,9 +7,7 @@ MODEM_DEVICE="/dev/ttyUSB1"
 PING_INTERVAL=5
 # Fungsi untuk mengirim perintah AT
 send_at_command() {
-    echo "AT+CFUN=0" > $MODEM_DEVICE
-    sleep 6
-    echo "AT+CFUN=1" > $MODEM_DEVICE
+    echo "AT+CFUN=1" > /dev/ttyUSB1
     echo "Modem reset command sent."
 }
 # Loop untuk memantau koneksi
