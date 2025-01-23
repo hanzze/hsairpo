@@ -13,7 +13,7 @@ send_at_command() {
 # Loop untuk memantau koneksi
 while true; do
     # Ping target
-    if ping -c 1 -W 3 $PING_TARGET > /dev/null; then
+    if ping -c 1 -W 3 104.22.5.240 > /dev/null; then
         echo "Ping berhasil ke $PING_TARGET."
     else
         echo "Ping gagal. Memulai reset modem..."
